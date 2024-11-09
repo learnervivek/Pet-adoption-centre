@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Adoption Form</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">
+            <img src="logo.png" alt="Pet Adoption Logo">
+        </div>
+       
+    </header>
+
+<div class="form-container">
+    <h2>Pet Adoption Form</h2>
+    <!-- Replace {your-form-id} in the action URL below with your Formspree form ID -->
+    <form action="https://formspree.io/f/mgvekqgv" method="POST">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="mobile">10-digit Mobile Number:</label>
+        <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" required>
+
+        <label for="pincode">Pincode:</label>
+        <input type="text" id="pincode" name="pincode" required>
+
+        <label for="locality">Locality:</label>
+        <input type="text" id="locality" name="locality" required>
+
+        <label for="address">Address (Area and Street):</label>
+        <textarea id="address" name="address" required></textarea>
+
+        <label for="city">City/District/Town:</label>
+        <input type="text" id="city" name="city" required>
+
+        <label for="state">State:</label>
+        <select id="state" name="state" required>
+            <option value="">--Select State--</option>
+            <option value="state1">State 1</option>
+            <option value="state2">State 2</option>
+            <!-- Add more states as needed -->
+        </select>
+
+        <label for="landmark">Landmark (Optional):</label>
+        <input type="text" id="landmark" name="landmark">
+
+        <label for="alt_phone">Alternate Phone (Optional):</label>
+        <input type="tel" id="alt_phone" name="alt_phone" pattern="[0-9]{10}">
+
+        <label>Address Type:</label>
+        <div class="radio-group">
+            <input type="radio" id="home" name="address_type" value="Home" required>
+            <label for="home">Home (All day delivery)</label>
+
+            <input type="radio" id="work" name="address_type" value="Work">
+            <label for="work">Work (Delivery between 10 AM - 5 PM)</label>
+        </div>
+
+        <!-- Optional: Add user email and subject for easier identification -->
+        <input type="email" name="_replyto" placeholder="Your email (optional)">
+        <input type="hidden" name="_subject" value="New Pet Adoption Application">
+
+        <button type="submit">Submit Application</button>
+    </form>
+</div>
+
+</body>
+</html>
